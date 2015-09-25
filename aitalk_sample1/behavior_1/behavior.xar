@@ -34,7 +34,7 @@
     def onInput_onStart(self, p):
         import requests
 
-        url = 'http://webapi.aitalk.jp/webapi/v1/ttsget.php'
+        url = self.getParameter("WebAPI URL")
         data = {
             'username':self.getParameter("username"),
             'password':self.getParameter("password"),
@@ -63,6 +63,7 @@
                             <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="ボックスBehaviorの終了時に信号を送る。" id="4" />
                             <Parameter name="username" inherits_from_parent="0" content_type="3" value="" default_value="" custom_choice="0" tooltip="" id="5" />
                             <Parameter name="password" inherits_from_parent="0" content_type="3" value="" default_value="" custom_choice="0" tooltip="" id="6" />
+                            <Parameter name="WebAPI URL" inherits_from_parent="0" content_type="3" value="" default_value="" custom_choice="0" tooltip="" id="7" />
                         </Box>
                         <Box name="Play Sound File" id="3" localization="8" tooltip="Play the sound." x="496" y="67">
                             <bitmap>media/images/box/interaction/play_music.png</bitmap>
